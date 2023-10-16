@@ -1,0 +1,6 @@
+{
+	"clients":[
+	{"id":1,"clientname":"Nike","biz_type":88000},
+	{"id":2,"clientname":"Google","biz_type":56000}
+	]
+}
