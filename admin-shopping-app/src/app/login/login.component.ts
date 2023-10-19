@@ -19,7 +19,8 @@ export class LoginComponent {
   checkLoginDetails(): void {
     let login = this.loginRef.value;
     if(this.loginService.checkLoginDetails(login)){
-        this.router.navigate(["home"],{skipLocationChange:true});
+        this.router.navigate(["home"],{skipLocationChange:true}); //This is telling the program 
+        //to go to the "home" page if login success and hide it 'skipLocationChange' attribute
 
     } else {
         this.msg="failure try once again";      

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form [formGroup]="clientRef" (ngSubmit)="storeClientDetails()">
+        <form [formGroup]="clientRef" (ngSubmit)="storeClientDetails()">
         <label>ClientName</label>
         <input type="text" formControlName="clientName"/><br/>
         <label>ClientDescription</label>
@@ -8,10 +8,8 @@
         <input type="url" formControlName="clientImageUr"/><br/>
         <input type="submit" value="Client Store" class="btn btn-success"/>
         <input type="reset" value="reset" class="btn btn-info"/>
-
     </form>
-
-
+    <br/>
     <table class="table">
         <tr>
             <th>CID</th>
@@ -26,8 +24,8 @@
             <td>{{client.clientName}}</td>
             <td>{{client.clientDescription}}</td>
             <td>{{client.clientImageUrl}}</td>
-            <td><img src="{{clients.clientImageUrl}}" width="150"></td>
+            <td><img src="{{client.clientImageUrl}}" width="100px" height="100px"/></td> 
             <td><input type="button" value="Delete" (click)="deleteClient(client.id)"></td>
-            <td><input type="button" value="Update" (click)="updateClient"(clients)/></td>
+            <td><button type="button" value="Update" (click)="updateClient(client)">Update</button></td>
     </table>
 </div>
